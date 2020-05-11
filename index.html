@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Password Generator</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Password Generator</h1>
+    <h6>Please pick a password length, must be between 8 and 128 characters.</h6>
+    <br>
+    <form id="myForm" class="form-inline justify-content-center">
+        <div class="form-group mb-2" id="numBox">
+          <label for="staticEmail2" class="sr-only">Password Length:</label>
+          <input type="text" class="form-control" id="passWordLengthChoice" placeholder="Number">
+        </div>
+        <div class="form-check-inline">
+            <input class="form-check-input" type="checkbox" value="true" id="defaultCheck1" name="specialCharCheck">
+            <label class="form-check-label" for="defaultCheck1">
+              Special Characters
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <input class="form-check-input" type="checkbox" value="true" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2">
+              Upper Case
+            </label>
+          </div>
+        <button type="submit" class="btn btn-primary mb-2" id="generatePasswordBtn" onClick="generatePassword(event)">Generate!</button>
+      </form>
+
+    <div id="passWordSpace" class="alert alert-primary justify-content-center">
+        Password Will Appear Here
+    </div>
+</div>
+    
+</body>
+<script src="app.js"></script>
+</html>
